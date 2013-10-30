@@ -1,6 +1,6 @@
 {
   "name": "selenium-wrapper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A selenium server wrapper, including installation and chrome webdriver",
   "main": "run.js",
   "bin": {
