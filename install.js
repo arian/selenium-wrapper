@@ -41,7 +41,8 @@ function doThings(things, callback) {
 doThings([
 	[downloadFile, jarURL],
 	[downloadFile, chromeDriverURL],
-	[unzip, chromeDriverURL]
+	[unzip, chromeDriverURL],
+	[chmod, 'chromedriver']
 ], function() {
 	console.log('done');
 });
@@ -53,6 +54,15 @@ function unzip(fileURL, callback) {
 	var zip = new AdmZip(filePath);
 	zip.extractAllTo(extractedPath, true);
 	callback();
+}
+
+function chmod(filePath, callback) {
+	if (process.platform != 'win32') {
+		console.log('chmod', filePath);
+		fs.chmod(filePath, '0777', callback);
+	} else {
+		callback();
+	}
 }
 
 function downloadFile(fileURL, callback) {
