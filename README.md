@@ -4,15 +4,14 @@
 
 ```bash
 # to download selenium and the chrome webdriver
-node install.js
+npm install selenium-wrapper -g
 ```
 
 ## Run selenium
 
 ```bash
 # first start selenium and chrome driver
-java -jar selenium-server-standalone-2.37.0.jar &
-./chromedriver &
+selenium
 ```
 
 # Run the tests
@@ -24,7 +23,7 @@ mocha tests/ --browser=chrome
 mocha tests/ --browser=firefox
 ```
 
-## API
+## wd API
 
 Examples can be found in the [wd repository](https://github.com/admc/wd)
 

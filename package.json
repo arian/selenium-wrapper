@@ -4,7 +4,7 @@
   "description": "A selenium server wrapper, including installation and chrome webdriver",
   "main": "run.js",
   "bin": {
-    "selenium": "node run"
+    "selenium": "run.js"
   },
   "dependencies": {
     "selenium-server": "~2.35.0",
