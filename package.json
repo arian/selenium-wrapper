@@ -7,15 +7,9 @@
     "selenium": "run.js"
   },
   "dependencies": {
-    "selenium-server": "~2.35.0",
-    "wd": "~0.2.0",
-    "adm-zip": "~0.4.3",
-    "mocha": "~1.13.0",
-    "expect.js": "~0.2.0",
-    "argv": "0.0.2"
+    "adm-zip": "~0.4.3"
   },
   "scripts": {
-    "test": "mocha tests",
     "install": "node install.js"
   },
   "author": "Arian Stolwijk",
