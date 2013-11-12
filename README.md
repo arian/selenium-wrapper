@@ -1,4 +1,14 @@
-# Running selenium tests with `wd`.
+# Installing the selenium jar
+
+This package will download the selenium-server.jar and webdrivers for:
+
+- Chrome
+
+With that the supported browsers are:
+
+- firefox
+- phantomjs
+- chrome
 
 ## Installation
 
@@ -14,16 +24,7 @@ npm install selenium-wrapper -g
 selenium
 ```
 
-# Run the tests
-
-```bash
-# then run the tests
-mocha tests/ --browser=phantomjs
-mocha tests/ --browser=chrome
-mocha tests/ --browser=firefox
-```
-
-## wd API
+# Writing the tests using wd
 
 Examples can be found in the [wd repository](https://github.com/admc/wd)
 
