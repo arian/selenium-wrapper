@@ -5,3 +5,4 @@ phantomjsdriver.log
 chromedriver_linux64.zip
 foo.png
 npm-debug.log
+chromedriver*

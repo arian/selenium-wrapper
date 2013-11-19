@@ -4,11 +4,18 @@
 
 var spawn = require('child_process').spawn;
 
-spawn('java', [
+var args = [
 	'-jar',
-	'selenium-server-standalone-2.37.0.jar',
+	__dirname + '/selenium-server-standalone-2.37.0.jar',
 	'-Dwebdriver.chrome.driver=chromedriver'
-], {
+];
+
+var argv = process.argv;
+for (var i = 2; i < argv.length; i++) {
+	args.push(argv[i]);
+}
+
+spawn('java', args, {
 	stdio: 'inherit',
 	cwd: __dirname
 });
