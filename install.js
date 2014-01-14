@@ -7,9 +7,9 @@ var url = require('url');
 var util = require('util');
 var AdmZip = require('adm-zip');
 
-var jarURL = 'http://selenium.googlecode.com/files/selenium-server-standalone-2.37.0.jar';
+var jarURL = 'http://selenium.googlecode.com/files/selenium-server-standalone-2.39.0.jar';
 
-var chromeDriverURL = 'http://chromedriver.storage.googleapis.com/2.4/chromedriver_';
+var chromeDriverURL = 'http://chromedriver.storage.googleapis.com/2.8/chromedriver_';
 
 if (process.platform === 'linux' && process.arch === 'x64') {
 	chromeDriverURL += 'linux64.zip';
