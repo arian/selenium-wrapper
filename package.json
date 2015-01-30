@@ -1,6 +1,6 @@
 {
   "name": "selenium-wrapper",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A selenium server wrapper, including installation and chrome webdriver",
   "main": "run.js",
   "bin": {
@@ -13,5 +13,12 @@
     "install": "node install.js"
   },
   "author": "Arian Stolwijk",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arian/selenium-wrapper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arian/selenium-wrapper/issues"
+  }
 }
