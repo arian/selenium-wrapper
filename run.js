@@ -6,7 +6,7 @@ var spawn = require('child_process').spawn;
 
 var args = [
 	'-jar',
-	__dirname + '/selenium-server-standalone-2.39.0.jar',
+	__dirname + '/selenium-server-standalone-2.44.0.jar',
 	'-Dwebdriver.chrome.driver=chromedriver'
 ];
 
