@@ -1,17 +1,17 @@
 "use strict";
 
 var fs = require('fs');
-var http = require('http');
+var https = require('https');
 var path = require('path');
 var url = require('url');
 var util = require('util');
 var AdmZip = require('adm-zip');
 
-// TODO: use http://selenium-release.storage.googleapis.com/index.html to find latest version number
-var jarURL = 'http://selenium-release.storage.googleapis.com/2.44/selenium-server-standalone-2.44.0.jar';
+// TODO: use https://selenium-release.storage.googleapis.com/index.html to find latest version number
+var jarURL = 'https://selenium-release.storage.googleapis.com/2.44/selenium-server-standalone-2.44.0.jar';
 
-// TODO: use contents of http://chromedriver.storage.googleapis.com/LATEST_RELEASE to determine version to download
-var chromeDriverURL = 'http://chromedriver.storage.googleapis.com/2.14/chromedriver_';
+// TODO: use contents of https://chromedriver.storage.googleapis.com/LATEST_RELEASE to determine version to download
+var chromeDriverURL = 'https://chromedriver.storage.googleapis.com/2.14/chromedriver_';
 
 if (process.platform === 'linux' && process.arch === 'x64') {
 	chromeDriverURL += 'linux64.zip';
@@ -84,7 +84,7 @@ function downloadFile(fileURL, callback) {
 	var writePath = filePath + '-download-' + Date.now();
 	var outFile = fs.openSync(writePath, 'w');
 
-	var client = http.get(requestOptions, function(response) {
+	var client = https.get(requestOptions, function(response) {
 		var status = response.statusCode;
 
 		console.log('Receiving...');
@@ -109,7 +109,7 @@ function downloadFile(fileURL, callback) {
 		} else {
 			client.abort();
 			console.error('Error requesting archive');
-			callback(new Error('Error with http request: ' + util.inspect(response.headers)));
+			callback(new Error('Error with https request: ' + util.inspect(response.headers)));
 		}
 
 	});
